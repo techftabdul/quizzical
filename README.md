@@ -8,7 +8,7 @@ This project was built as a **solo portfolio project** during a Scrimba Full Sta
 
 ## Demo
 
-🌐 Live Demo: []
+🌐 Live Demo: [https://demo-quizzical.netlify.app/]
 
 ---
 
