@@ -17,7 +17,14 @@ function App() {
   // Helper to safely decode Base64 + HTML entities
   function safeDecode(str) {
     try {
-      return he.decode(atob(str));
+      const binary = atob(str);
+      const utf8 = decodeURIComponent(
+        binary
+          .split("")
+          .map((c) => "%" + c.charCodeAt(0).toString(16).padStart(2, "0"))
+          .join(""),
+      );
+      return he.decode(utf8);
     } catch {
       return he.decode(str);
     }
